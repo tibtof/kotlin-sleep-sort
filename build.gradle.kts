@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.ktlint)
 }
 
 group = "com.github.tibof"
@@ -10,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-
     implementation(libs.coroutines.core)
+
+    testImplementation(kotlin("test"))
     testImplementation(libs.coroutines.test)
 }
 

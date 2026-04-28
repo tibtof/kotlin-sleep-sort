@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ktlint
+        name: ktlint
+        entry: ./gradlew ktlintCheck
+        language: system
+        types_or: [kotlin]
+        pass_filenames: false
