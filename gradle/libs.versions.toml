@@ -2,10 +2,13 @@
 kotlin = "2.4.21"
 coroutines = "1.11.0"
 ktlint = "14.2.0"
+ktlint-cli = "1.8.0"
 
 [libraries]
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+# Not a build dependency: gives Dependabot a coordinate for the engine version the ktlint plugin runs.
+ktlint-cli = { module = "com.pinterest.ktlint:ktlint-cli", version.ref = "ktlint-cli" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

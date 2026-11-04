@@ -24,3 +24,9 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
+
+ktlint {
+    version.set(libs.versions.ktlint.cli)
+    // ktlint 1.7 stopped running no-unused-imports by default; keep the check we had.
+    additionalEditorconfig.set(mapOf("ktlint_standard_no-unused-imports" to "enabled"))
+}
